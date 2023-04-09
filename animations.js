@@ -1,14 +1,22 @@
-function toggleMenu() {
-    const menu = document.querySelector(".navbar");
-    const description = document.querySelector(".description");
+const menu = document.querySelector(".navbar");
+const description = document.querySelector(".description");
+const navButton = document.querySelector(".nav-button");
 
-    if (menu.classList.contains("nav-open")) {
+
+function toggleMenu() {
+    if (menu.classList.contains("nav-open")) 
+    {
         menu.classList.remove("nav-open");
         description.classList.remove("description-clicked");
         
-    } else {
+    } else 
+    {
         menu.classList.add("nav-open");
         description.classList.add("description-clicked");
     }
 
 }
+
+navButton.addEventListener("click", toggleMenu);
+
+ 
