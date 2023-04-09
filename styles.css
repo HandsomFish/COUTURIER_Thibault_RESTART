@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
 
 body {
-    background-color: white;
+    background-color: #C85C8E;
     font-family: 'Alegreya', sans-serif;
     color: none;
     margin: 0;
@@ -29,18 +29,61 @@ h3 {
     width: auto;
 }
 
-.navbar {
-    padding: 0 3vw;
-    display: flex;
-    justify-content: end;
+.nav-button {
+    width: 50px;
+    height: 50px;
+    background-color: #FFBABA;
+    border-radius: 5%;
+    position: relative;
+    cursor: pointer;
+    left: 95%;
+    
 }
 
-.nav-icon {
-    margin: 1vh 1.2vw;
+.burger-menu {
+    position: relative;
+    top: 32%;
+}
+
+.burger-menu:hover {
+    color: #FFBABA;
+}
+
+.nav-button:hover {
+    background-color: white;
+}
+
+.navbar {
+    width: 0px;
+    height: 0px;
+    background-color: #FFBABA;
+    border-radius: 5%;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.nav-open {
+    width: 200px;
+    height: 200px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.nav-item {
+    display: block;
+    height: 50px;
+    background-color: #FFBABA;
+    color: #C85C8E;
+    font-size: 18px;
+    line-height: 50px;
+    padding-left: 15px;
+    transition: height 0.3s ease-in-out;
 }
 
 .nav-icon:hover {
-    color: #FFBABA;
+    color: white;
 }
 
 .page-container {
@@ -61,6 +104,7 @@ h3 {
     align-items: center;
     border-radius: 10px;
     padding: 0;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .friend:hover {
@@ -83,15 +127,21 @@ h3 {
     font-size: 2rem;
     text-align: center;
     background-color: #C85C8E;
-    margin: 0;
     padding: 5vh 0;
     
 }
 
+.description-clicked {
+    margin-top: 140px;
+}
+
 .carte-container {
+    background-color: white;
+    padding-left: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    animation : fadeIn 1s ease-in-out;
 }
 
 .carte {
@@ -108,6 +158,7 @@ h3 {
 .carte-image {
     width: 20vw;
 }
+
 
 .heart-cartes:hover {
     color: red;
@@ -149,6 +200,16 @@ a {
 a:hover {
     color: white;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 
 
 

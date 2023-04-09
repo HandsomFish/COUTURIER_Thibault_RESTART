@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/25e2ecb5af.js" crossorigin="anonymous"></script>
+    
     <title>Friendzone</title>
 </head>
 <body>
 
    
     <div class="header">
-        <h1><img class="friendzone-logo" src="images/friendzone-logo.png" alt="friend-zone-logo">FriendZone</h1>
+        <h1><img class="friendzone-logo" src="/images/friendzone-logo.png" alt="friend-zone-logo">FriendZone</h1>
         <h3>Tombez Amoureux de ceux qui ne vous aiment pas</h3>
-        <div class="navbar">
-            <i class="fa-solid fa-house fa-xl nav-icon"></i>            
-            <i class="fa-solid fa-user fa-xl nav-icon"></i>
-            <i class="fa-solid fa-envelope fa-xl nav-icon"></i>
-            <i class="fa-solid fa-magnifying-glass fa-xl nav-icon"></i>
+        <div class="nav-button" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-2xl burger-menu"></i>
+            <div class="navbar" id="menu">
+                <a href="#" class="nav-item"><i class="fa-solid fa-house fa-xl nav-icon"></i></a>            
+                <a href="#" class="nav-item"><i class="fa-solid fa-user fa-xl nav-icon"></i> </a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-envelope fa-xl nav-icon"></i></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass fa-xl nav-icon"></i></a>
+            </div>
         </div>
     </div>
 
@@ -97,5 +100,7 @@
                 <li><a href="https://en.wikipedia.org/wiki/The_Social_Network"><i class="fa-brands fa-twitter fa-xl"></i> Un autre social network</a></li>
             </ul>
         </div>
+
+        <script src="animations.js"></script>
 </body>
 </html>
